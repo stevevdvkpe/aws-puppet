@@ -1,5 +1,5 @@
 # puppetmaster
-node 'ip-10-0-20-129' {
+node 'ip-10-0-20-82' {
 	# check for puppet configuration updates every five minutes
     	cron { "puppet update":
 		command => "cd /etc/puppet && git pull -q origin master",
@@ -9,11 +9,11 @@ node 'ip-10-0-20-129' {
 }
 
 # web1
-node 'ip-10-0-20-180' {
+node 'ip-10-0-20-19' {
 	include apache
 }
 
 # web2
-node 'ip-10-0-20-193' {
+node 'ip-10-0-20-50' {
 	include apache
 }
