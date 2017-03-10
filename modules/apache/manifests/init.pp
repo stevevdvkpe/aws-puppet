@@ -3,7 +3,7 @@ class apache {
 		ensure => installed,
 	}
 
-	service { "apache":
+	service { "apache2":
 		enable  => true,
 		ensure  => running,
 		require => Package["apache2"],
