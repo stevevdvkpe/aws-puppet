@@ -1,7 +1,6 @@
 # puppetmaster
 node 'ip-10-0-20-82' {
 	# check for puppet configuration updates every five minutes
-	message => "running on puppet master"
     	cron { "puppet update":
 		command => "cd /etc/puppet && git pull -q origin master",
 		user    => root,
